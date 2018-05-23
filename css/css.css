@@ -16,7 +16,6 @@ li{
     clear: both;
 }
 .topNavBar .logo{
-    
     font-size: 24px;
     font-weight: bold;
     font-family: 'Arial Black';
@@ -24,10 +23,9 @@ li{
 }
 .topNavBar .logo .RS{
     color: #e6686a;
-    
 }
 .topNavBar .logo .RScard{
-    color:#9a9da2;
+    color:#b7b7b7;
 } 
 .topNavBar{
     margin-top: 30px;
@@ -35,12 +33,12 @@ li{
 }
 .topNavBar nav{
     float:right;
-    
 }
 .topNavBar nav ul li{
     float: left;
     color:#9a9da2;
     font-size: 12px;
+    font-weight: bold;
     cursor: pointer;
     border-bottom: 3px solid transparent;
     margin-top: 8px;
