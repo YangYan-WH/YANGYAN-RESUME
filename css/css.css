@@ -64,11 +64,15 @@ li{
     height: 515px;
     background:rgba(0,0,0,0.8);
 }
+main{
+    margin-top:-340px;
+}
 main .content{
     max-width: 840px;
     margin: 0 auto;
     background-color:#fff;
     padding: 50px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
 main .content .pic{
     display: inline-block;
@@ -132,6 +136,7 @@ main .media{
     background-color: #e6686a;
     text-align: center;
     padding:16px 0;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
 main .media a{
     display: inline-block;
@@ -155,4 +160,25 @@ main .media img{
 }
 main .media a:hover{
     background-color: #e6a8a9;
+}
+main .wrapdownload{
+    text-align: center;
+}
+main a.button{
+    display: inline-block;
+    margin:32px auto;
+    padding: 20px 55px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #cdcfd1;
+}
+main a.button:hover{
+    box-shadow: 0px 12px 30px -12px rgba(148,145,148,1);
+    transition: 0.1s;
+}
+main .intro{
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
 }
