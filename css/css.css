@@ -1,47 +1,57 @@
-*{
+* {
     margin: 0;
     padding: 0;
     color: #000;
 }
-body{
-    background-color:rgb(239, 239, 239);
+
+body {
+    background-color: rgb(239, 239, 239);
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
-.clearfix::after{
+
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
 }
-.topNavBar .logo{
+
+.topNavBar .logo {
     font-size: 24px;
     font-weight: bold;
     font-family: 'Arial Black';
     padding-left: 16px;
 }
-.topNavBar .logo .RS{
+
+.topNavBar .logo .RS {
     color: #e6686a;
 }
-.topNavBar .logo .RScard{
+
+.topNavBar .logo .RScard {
     margin-left: 3px;
-    color:#b7b7b7;
-} 
-.topNavBar{
+    color: #b7b7b7;
+}
+
+.topNavBar {
     padding-top: 25px;
     padding-bottom: 30px;
     position: fixed;
     width: 100%
 }
-.topNavBar nav{
-    float:right;
+
+.topNavBar nav {
+    float: right;
 }
-.topNavBar nav ul li{
+
+.topNavBar nav ul li {
     float: left;
-    color:#9a9da2;
+    color: #9a9da2;
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
@@ -51,107 +61,124 @@ li{
     padding-top: 3px;
     padding-bottom: 3px;
 }
-.topNavBar nav ul li:hover{
+
+.topNavBar nav ul li:hover {
     border-bottom: 3px solid #e6686a;
 }
-.banner{
+
+.banner {
     background-image: url(./img/rs-cover.jpg);
     background-position: center center;
     background-size: cover;
     height: 515px;
 }
-.banner .mask{
+
+.banner .mask {
     height: 515px;
-    background:rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
-main{
-    margin-top:-340px;
+
+main {
+    margin-top: -340px;
 }
-main .content{
+
+main .content {
     max-width: 840px;
     margin: 0 auto;
-    background-color:#fff;
+    background-color: #fff;
     padding: 50px;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
-main .content .pic{
+
+main .content .pic {
     display: inline-block;
     vertical-align: top;
-    /* margin: 50px 0 0 50px; */
 }
-main .content .text{
+
+main .content .text {
     display: inline-block;
     vertical-align: top;
-    margin-left:60px;
+    margin-left: 60px;
     width: 470px;
 }
-main .content .text .welcome{
+
+main .content .text .welcome {
     font-size: 16px;
     display: inline-block;
     vertical-align: top;
     padding: 4px 16px;
-    background-color:#e6686a;
+    background-color: #e6686a;
     color: #fff;
     position: relative;
     margin-bottom: 10px;
     border-radius: 2px;
 }
-main .content .text .welcome .traingle{
-    display:block;
-	border:5px solid #e6686a;
-	width:0;
-	height:0;
-	border-right-color:transparent;
-	border-bottom-color: transparent;
+
+main .content .text .welcome .traingle {
+    display: block;
+    border: 5px solid #e6686a;
+    width: 0;
+    height: 0;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
     position: absolute;
-    top:100%;
+    top: 100%;
     left: 5px
 }
-main .content .text h1{
+
+main .content .text h1 {
     margin-top: 20px;
 }
-main .content .text hr{
-    margin:20px 0 10px;
-    border:none;
+
+main .content .text hr {
+    margin: 20px 0 10px;
+    border: none;
     border-top: 1px solid #DEDEDE;
 }
-main .content .text dl{
+
+main .content .text dl {
     margin-top: 6px;
 }
-main .content .text dt{
+
+main .content .text dt {
     float: left;
     width: 30%;
     font-weight: bold;
     margin-top: 12px;
 }
-main .content .text dd{
+
+main .content .text dd {
     float: right;
     width: 70%;
     margin-top: 12px;
-    color:#9da0a7;
+    color: #9da0a7;
 }
 
-main .media{
+main .media {
     max-width: 940px;
     margin: 0 auto;
     background-color: #e6686a;
     text-align: center;
-    padding:16px 0;
+    padding: 16px 0;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
-main .media a{
+
+main .media a {
     display: inline-block;
     vertical-align: top;
     height: 38px;
     width: 38px;
     border-radius: 50%;
-    border:1px solid #e6686a;
+    border: 1px solid #e6686a;
     position: relative;
 }
-main .media a:nth-child(2),main .media a:nth-child(3){
+
+main .media a:nth-child(2),
+main .media a:nth-child(3) {
     margin-left: 50px;
 }
-main .media img{
+
+main .media img {
     height: 30px;
     width: 30px;
     /* background: #e6686a; */
@@ -159,131 +186,159 @@ main .media img{
     top: 5px;
     left: 5px;
 }
-main .media a:hover{
+
+main .media a:hover {
     background-color: #e6a8a9;
 }
-main .wrapdownload{
+
+main .wrapdownload {
     text-align: center;
 }
-main a.button{
+
+main a.button {
     display: inline-block;
-    margin:32px auto;
+    margin: 32px auto;
     padding: 20px 55px;
     font-size: 14px;
     font-weight: bold;
     border: 1px solid #cdcfd1;
     border-radius: 2px;
 }
-main a.button:hover{
-    box-shadow: 0px 12px 30px -12px rgba(148,145,148,1);
+
+main a.button:hover {
+    box-shadow: 0px 12px 30px -12px rgba(148, 145, 148, 1);
     transition: 0.1s;
 }
-main .intro{
+
+main .intro {
     max-width: 940px;
     margin: 0 auto;
     text-align: center;
     font-size: 20px;
 }
-.skills{
+
+.skills {
     margin: 60px auto 0;
     max-width: 940px;
 }
-.skills h2{
+
+.skills h2 {
     text-align: center;
     font-size: 34px;
 }
-.skills ol{
+
+.skills ol {
     margin-top: 30px;
     padding-bottom: 50px;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
     background: white;
 }
-.skills ol li{
+
+.skills ol li {
     float: left;
     width: 48%;
-    box-sizing:border-box;
-    padding:40px 50px 0 0;
+    box-sizing: border-box;
+    padding: 40px 50px 0 0;
 }
-.skills ol li:nth-child(odd){
-    padding-left:40px;
+
+.skills ol li:nth-child(odd) {
+    padding-left: 40px;
 }
-.skills ol li h3{
+
+.skills ol li h3 {
     font-weight: normal;
     font-size: 16px;
 }
-.skills ol li .progressBar{
+
+.skills ol li .progressBar {
     height: 5px;
     background: #FAE1E1;
     border-radius: 2px;
-    /* margin: 4px 0 40px; */
 }
-.skills ol li .progressBar .progress{
+
+.skills ol li .progressBar .progress {
     height: 5px;
     background: #e6686a;
     border-radius: 2px;
 }
-.portfolio{
+
+.portfolio {
     margin: 65px auto 100px;
     max-width: 940px;
     text-align: center;
 }
-.portfolio h2{
+
+.portfolio h2 {
     text-align: center;
     font-size: 34px;
 }
-.portfolio nav{
+
+.portfolio nav {
     display: inline-block;
     vertical-align: top;
-    margin:30px auto 30px;
+    margin: 30px auto 30px;
 }
-.portfolio nav ol li{
+
+.portfolio nav ol li {
     float: left;
     padding-bottom: 5px;
 }
-.portfolio nav ol li:nth-child(2),li:nth-child(3){
+
+.portfolio nav ol>li:nth-child(2),
+.portfolio nav ol>li:nth-child(3) {
     padding-left: 40px;
     cursor: pointer;
 }
-.portfolio .bar{
+
+.portfolio .bar {
     height: 5px;
     background: #fff;
     border-radius: 2px;
 }
-.portfolio .bar .bar-inner{
+
+.portfolio .bar .bar-inner {
     transition: 0.5s;
     height: 100%;
     background: #e6686a;
     border-radius: 2px;
 }
-.portfolio .state-1 .bar-inner{
+
+.portfolio .state-1 .bar-inner {
     width: 20%;
 }
-.portfolio .state-2 .bar-inner{
+
+.portfolio .state-2 .bar-inner {
     margin-left: 28%;
     width: 20%;
-    
 }
-.portfolio .state-3 .bar-inner{
+
+.portfolio .state-3 .bar-inner {
     margin-left: 60%;
-    width: 40%; 
+    width: 40%;
 }
-.portfolio .works{
+
+.portfolio .works {
     min-width: 940px;
 }
-.portfolio .works .big{
+
+.portfolio .works .big {
     float: left;
 }
-.portfolio .works .small{
-    float:right;
+
+.portfolio .works .small {
+    float: right;
 }
-.portfolio .works .big img{
+
+.portfolio .works .big img {
     width: 606px;
     height: 597px;
 }
-.portfolio .works .small img{
+
+.portfolio .works .small img {
     width: 293px;
     height: 285px;
 }
-.portfolio .works .small:nth-child(3){
-    padding-top:22px;
+
+.portfolio .works .small:nth-child(3) {
+    padding-top: 22px;
 }
