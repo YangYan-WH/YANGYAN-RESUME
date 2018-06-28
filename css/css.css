@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    color: #000;
+    /* color: #000; */
 }
 
 body {
@@ -39,33 +39,73 @@ li {
 }
 
 .topNavBar {
-    padding-top: 25px;
-    padding-bottom: 30px;
+    padding: 25px 0 30px;
+    /* padding-bottom: ; */
     position: fixed;
-    width: 100%
+    width: 100%;
+    transition:0.5s;
+    z-index: 1;
+    color: #b7b7b7;
 }
-
+.topNavBar.sticky{
+    background: white;
+    padding: 15px 0 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #000;
+}
 .topNavBar nav {
     float: right;
 }
 
-.topNavBar nav ul li {
+.topNavBar>nav >ul> li {
     float: left;
-    color: #9a9da2;
+    margin-top: 8px;
+    margin-right: 35px;
+    position: relative;   
+}
+.topNavBar nav ul li > a{
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
-    border-bottom: 3px solid transparent;
-    margin-top: 8px;
-    margin-right: 35px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    position: relative;
+    color: inherit;
+}
+.topNavBar nav ul li >a:hover::after {
+    /* border-bottom: 3px solid #e6686a; */
+    content: '';
+    display: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #e6686a;
+    height: 3px;
+    animation: menuSlide .3s;
 }
 
-.topNavBar nav ul li:hover {
-    border-bottom: 3px solid #e6686a;
+@keyframes menuSlide{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
 }
-
+.topNavBar .submenu{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+.topNavBar .submenu.active{
+    display: block;
+}
+.topNavBar .submenu > li{
+    white-space: nowrap;
+}
 .banner {
     background-image: url(./img/rs-cover.jpg);
     background-position: center center;

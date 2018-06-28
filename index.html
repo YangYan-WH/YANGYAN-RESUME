@@ -10,20 +10,44 @@
 </head>
 
 <body>
-    <header class="topNavBar clearfix">
+    <header id="topNavBar" class="topNavBar clearfix ">
         <a class="logo" href="#">
             <span class="RS">RS</span>
             <span class="RScard">card</span>
         </a>
         <nav>
             <ul class="clearfix">
-                <li>关于</li>
-                <li>技能</li>
-                <li>作品</li>
-                <li>博客</li>
-                <li>日历</li>
-                <li>联系方式</li>
-                <li>其他</li>
+                <li>
+                    <a href="#">关于</a>
+                </li>
+                <li>
+                    <a href="#">技能</a>
+                </li>
+                <li>
+                    <a class="menuTrigger" href="#">作品</a>
+                    <ul class="submenu">
+                        <li>作品1</li>
+                        <li>作品2</li>
+                        <li>作品3</li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="menuTrigger" href="#">博客</a>
+                    <ul class="submenu">
+                        <li>博客1</li>
+                        <li>博客2</li>
+                        <li>博客3</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">日历</a>
+                </li>
+                <li>
+                    <a href="#">联系方式</a>
+                </li>
+                <li>
+                    <a href="#">其他</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -65,8 +89,10 @@
                 <img src="./css/img/weibo.png" alt="weibo">
             </a>
         </div>
-        <p class="wrapdownload"><a href="javascript:#" class="button" download>下载 PDF 简历</a></p>
-        
+        <p class="wrapdownload">
+            <a href="javascript:#" class="button" download>下载 PDF 简历</a>
+        </p>
+
         <p class="intro">目前正在进行前端开发的知识的学习,HTML &CSS &JavaScript</p>
     </main>
     <section class="skills">
@@ -158,7 +184,26 @@
                 <img src="./css/img/small2.jpg" alt="作品3">
             </div>
         </div>
-
+        <script>
+            window.onscroll = function () {
+                if (window.scrollY > 0) {
+                    topNavBar.classList.add('sticky')
+                } else {
+                    topNavBar.classList.remove('sticky')
+                }
+            }
+            var menuTriggers = document.getElementsByClassName('menuTrigger')
+            for(var i=0;i<menuTriggers.length;i++){
+                menuTriggers[i].onmouseenter = function(x){
+                    let a = x.currentTarget;
+                    
+                }
+                menuTriggers[i].onmouseleave = function(x){
+                    console.log(x.target);
+                    console.log(x.currentTarget)
+                }
+            }
+        </script>
     </section>
 </body>
 
