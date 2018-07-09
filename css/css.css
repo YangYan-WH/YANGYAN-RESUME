@@ -59,9 +59,10 @@ li {
 
 .topNavBar>nav >ul> li {
     float: left;
-    margin-top: 8px;
+    margin-top: 5px;
     margin-right: 35px;
-    position: relative;   
+    padding:5px 0;
+    position: relative;
 }
 .topNavBar nav ul li > a{
     display: block;
@@ -73,8 +74,7 @@ li {
     position: relative;
     color: inherit;
 }
-.topNavBar nav ul li >a:hover::after {
-    /* border-bottom: 3px solid #e6686a; */
+/* .topNavBar nav ul li >a:hover::after {
     content: '';
     display: black;
     position: absolute;
@@ -84,8 +84,18 @@ li {
     background: #e6686a;
     height: 3px;
     animation: menuSlide .3s;
+} */
+.topNavBar nav > ul > li.active > a::after { 
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #e06567;
+    height: 3px;
+    animation: menuSlide .3s;
 }
-
 @keyframes menuSlide{
     0%{
         width: 0;
@@ -94,18 +104,34 @@ li {
         width: 100%;
     }
 }
+
 .topNavBar .submenu{
+    /* border: 1px solid red; */
     display: none;
     position: absolute;
-    left: 0;
+    right: 0;
+    /* padding-top: 15px; */
     top: 100%;
-}
-.topNavBar .submenu.active{
+    background: white;
+    color: #3d4451;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }
+  .topNavBar li.active > .submenu{
     display: block;
-}
-.topNavBar .submenu > li{
+    animation: submenuSlide .3s;
+  }
+  @keyframes submenuSlide{
+    0%{
+      margin-right: 100%;
+    }
+    100%{
+      margin-right: 0%;
+    }
+  }
+  .topNavBar .submenu > li{
     white-space: nowrap;
-}
+    padding: 5px 10px;
+  }
 .banner {
     background-image: url(./img/rs-cover.jpg);
     background-position: center center;
@@ -243,6 +269,7 @@ main a.button {
     font-weight: bold;
     border: 1px solid #cdcfd1;
     border-radius: 2px;
+    color: black;
 }
 
 main a.button:hover {

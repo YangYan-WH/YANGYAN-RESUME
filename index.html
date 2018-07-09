@@ -15,16 +15,16 @@
             <span class="RS">RS</span>
             <span class="RScard">card</span>
         </a>
-        <nav>
+        <nav class="menu">
             <ul class="clearfix">
                 <li>
-                    <a href="#">关于</a>
+                    <a href="#siteAbout">关于</a>
                 </li>
                 <li>
-                    <a href="#">技能</a>
+                    <a href="#siteSkills">技能</a>
                 </li>
                 <li>
-                    <a class="menuTrigger" href="#">作品</a>
+                    <a href="#siteWorks">作品</a>
                     <ul class="submenu">
                         <li>作品1</li>
                         <li>作品2</li>
@@ -32,7 +32,8 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="menuTrigger" href="#">博客</a>
+                    <!-- <a class="menuTrigger" href="#">博客</a> -->
+                    <a href="#">博客</a>
                     <ul class="submenu">
                         <li>博客1</li>
                         <li>博客2</li>
@@ -55,7 +56,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="content">
+        <div id="siteAbout" class="content">
             <div class="pic">
                 <img src="./css/img/avatar.jpg" alt="头像">
             </div>
@@ -95,7 +96,7 @@
 
         <p class="intro">目前正在进行前端开发的知识的学习,HTML &CSS &JavaScript</p>
     </main>
-    <section class="skills">
+    <section id="siteSkills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -148,7 +149,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section id="siteWorks" class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -184,27 +185,52 @@
                 <img src="./css/img/small2.jpg" alt="作品3">
             </div>
         </div>
-        <script>
-            window.onscroll = function () {
-                if (window.scrollY > 0) {
-                    topNavBar.classList.add('sticky')
-                } else {
-                    topNavBar.classList.remove('sticky')
-                }
-            }
-            var menuTriggers = document.getElementsByClassName('menuTrigger')
-            for(var i=0;i<menuTriggers.length;i++){
-                menuTriggers[i].onmouseenter = function(x){
-                    let a = x.currentTarget;
-                    
-                }
-                menuTriggers[i].onmouseleave = function(x){
-                    console.log(x.target);
-                    console.log(x.currentTarget)
-                }
-            }
-        </script>
     </section>
+    <script>
+        window.onscroll = function () {
+            if (window.scrollY > 0) {
+                topNavBar.classList.add('sticky')
+            } else {
+                topNavBar.classList.remove('sticky')
+            }
+        }
+        // var menuTriggers = document.getElementsByClassName('menuTrigger')
+        // for(var i=0;i<menuTriggers.length;i++){
+        //     menuTriggers[i].onmouseenter = function(x){
+        //         let a = x.currentTarget;
+
+        //     }
+        //     menuTriggers[i].onmouseleave = function(x){
+        //         console.log(x.target);
+        //         console.log(x.currentTarget)
+        //     }
+        // }
+        let liTags = document.querySelectorAll('nav.menu > ul > li')
+
+        for (let i = 0; i < liTags.length; i++) {
+            liTags[i].onmouseenter = function (x) {
+                x.currentTarget.classList.add('active')
+            }
+            liTags[i].onmouseleave = function (x) {
+                x.currentTarget.classList.remove('active')
+            }
+        }
+
+        let aTags = document.querySelectorAll('nav.menu > ul > li > a');
+        console.log(aTags)
+        for (let i = 0; i < aTags.length; i++) {
+            aTags[i].onclick = function (x) {
+                x.preventDefault()
+                let a = x.currentTarget
+                let href = a.getAttribute('href') //'#siteAbout'
+                console.log(href)
+                let element = document.querySelector(href)
+                let top = element.offsetTop
+                window.scrollTo(0, top - 90)
+            }
+        }
+    </script>
+
 </body>
 
 </html>
