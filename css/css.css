@@ -24,6 +24,25 @@ li {
 [data-x].active{
     outline: 1px solid red;
 }
+[data-x].offset{
+    transform: translateY(100px)
+}
+[data-x]{
+    transform: translateY(0);
+    transition:all 0.5s;
+}
+[data-x].animate{
+    animation: slideUp 0.5s;
+}
+@keyframes slideUp{
+    0%{
+        transform: translateY(-30px)
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+
 .topNavBar .logo {
     font-size: 24px;
     font-weight: bold;
@@ -76,18 +95,10 @@ li {
     position: relative;
     color: inherit;
 }
-/* .topNavBar nav ul li >a:hover::after {
-    content: '';
-    display: black;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #e6686a;
-    height: 3px;
-    animation: menuSlide .3s;
-} */
-.topNavBar nav > ul > li.active > a::after { 
+
+.topNavBar nav > ul > li.active > a::after,
+.topNavBar nav > ul > li.highlight > a::after { 
+
     content: '';
     display: block;
     position: absolute;
@@ -323,12 +334,18 @@ main .intro {
     height: 5px;
     background: #FAE1E1;
     border-radius: 2px;
+    overflow: hidden;
 }
 
 .skills ol li .progressBar .progress {
     height: 5px;
     background: #e6686a;
     border-radius: 2px;
+    transform: translateX(0);
+    transition: all 1s;
+}
+.skills.offset ol li .progressBar .progress{
+    transform: translateX(-100%);
 }
 
 .portfolio {
