@@ -21,7 +21,9 @@ li {
     display: block;
     clear: both;
 }
-
+[data-x].active{
+    outline: 1px solid red;
+}
 .topNavBar .logo {
     font-size: 24px;
     font-weight: bold;

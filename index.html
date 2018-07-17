@@ -57,7 +57,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div id="siteAbout" class="content">
+        <div data-x id="siteAbout" class="content">
             <div class="pic">
                 <img src="./css/img/avatar.jpg" alt="头像">
             </div>
@@ -97,7 +97,7 @@
 
         <p class="intro">目前正在进行前端开发的知识的学习,HTML &CSS &JavaScript</p>
     </main>
-    <section id="siteSkills" class="skills">
+    <section data-x id="siteSkills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -150,7 +150,7 @@
             </li>
         </ol>
     </section>
-    <section id="siteWorks" class="portfolio">
+    <section data-x id="siteWorks" class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -189,12 +189,31 @@
     </section>
     <script src="https://cdn.bootcss.com/tween.js/r14/Tween.min.js"></script>
     <script>
-        window.onscroll = function () {
+        window.onscroll = function (x) {
             if (window.scrollY > 0) {
                 topNavBar.classList.add('sticky')
             } else {
                 topNavBar.classList.remove('sticky')
             }
+            let specialTags = document.querySelectorAll('[data-x]')
+            let minIndex = 0
+            for(let i=1;i<specialTags.length;i++){
+                if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs( specialTags[minIndex].offsetTop - window.scrollY)){
+                    minIndex = i;
+                }
+            }
+            for(let i=0;i<specialTags.length;i++){
+                specialTags[i].classList.remove('active')
+            }
+            specialTags[minIndex].classList.add('active')
+            let id = specialTags[minIndex].id
+            let a = document.querySelector('a[href="#'+id+'"]')
+            let li = a.parentNode;
+            let brothers = li.parentNode.children
+            for(let i=0;i<brothers.length;i++){
+                brothers[i].classList.remove('active')
+            }
+            li.classList.add('active')
         }
 
         let liTags = document.querySelectorAll('nav.menu > ul > li')
@@ -243,18 +262,6 @@
                         window.scrollTo(0, coords.y)
                     })
                     .start()
-                // let distance = (targetTop - currentTop) / n
-                // let i=0
-                // let id = setInterval(function (){
-                //     if(i===n){
-                //         window.clearInterval(id);
-                //         return
-                //     }
-                //     i=i+1
-                //     window.scrollTo(0, currentTop + distance *i)
-
-                // },t)
-
             }
         }
     </script>
