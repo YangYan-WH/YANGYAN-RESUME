@@ -349,7 +349,8 @@ main .intro {
 }
 
 .portfolio {
-    margin: 65px auto 100px;
+    /* margin: 65px auto 100px; */
+    margin: 80px auto 100px;
     max-width: 940px;
     text-align: center;
 }
@@ -368,6 +369,7 @@ main .intro {
 .portfolio nav ol li {
     float: left;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 .portfolio nav ol>li:nth-child(2),
@@ -427,4 +429,9 @@ main .intro {
 
 .portfolio .works .small:nth-child(3) {
     padding-top: 22px;
+}
+
+.swiper-container {
+    width: 800px;
+    height: 600px;
 }

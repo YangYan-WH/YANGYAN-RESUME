@@ -174,8 +174,23 @@
             }
         </script>
 
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <img src="./css/img/canvas.jpg" class="swiper-slide">
+                <img src="./css/img/nav.png" class="swiper-slide">
+                <img src="./css/img/slide.png" class="swiper-slide">
+            </div>
+            <!-- 如果需要分页器 -->
+            <!-- <div class="swiper-pagination"></div> -->
 
-        <div class="works clearfix">
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- 如果需要滚动条 -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <!-- <div class="works clearfix">
             <div class="big">
                 <img src="./css/img/big.jpg" alt="作品1">
             </div>
@@ -185,7 +200,7 @@
             <div class="small">
                 <img src="./css/img/small2.jpg" alt="作品3">
             </div>
-        </div>
+        </div> -->
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script src="https://cdn.bootcss.com/tween.js/r14/Tween.min.js"></script>
@@ -203,26 +218,7 @@
             } else {
                 topNavBar.classList.remove('sticky')
             }
-            /*let specialTags = document.querySelectorAll('[data-x]')
-            let minIndex = 0
-            for(let i=1;i<specialTags.length;i++){
-                if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs( specialTags[minIndex].offsetTop - window.scrollY)){
-                    minIndex = i;
-                }
-            }
-            // for(let i=0;i<specialTags.length;i++){
-            //     specialTags[i].classList.remove('active')
-            // }
-            // specialTags[minIndex].classList.add('active')
-            specialTags[minIndex].classList.remove('offset')
-            let id = specialTags[minIndex].id
-            let a = document.querySelector('a[href="#'+id+'"]')
-            let li = a.parentNode;
-            let brothers = li.parentNode.children
-            for(let i=0;i<brothers.length;i++){
-                brothers[i].classList.remove('highlight')
-            }
-            li.classList.add('highlight') */
+            
             animation();
         }
 
@@ -235,10 +231,6 @@
                     minIndex = i;
                 }
             }
-            // for(let i=0;i<specialTags.length;i++){
-            //     specialTags[i].classList.remove('active')
-            // }
-            // specialTags[minIndex].classList.add('active')
             specialTags[minIndex].classList.remove('offset')
             let id = specialTags[minIndex].id
             let a = document.querySelector('a[href="#' + id + '"]')
@@ -277,8 +269,6 @@
                 let element = document.querySelector(href)
                 let top = element.offsetTop
 
-                // let n = 25  //一共动多少次
-                // let t = 500/n // 多少时间动一次
                 let currentTop = window.scrollY
                 let targetTop = top - 80
                 let s = targetTop - currentTop
@@ -300,6 +290,27 @@
                     .start()
             }
         }
+
+        var mySwiper = new Swiper('.swiper-container', {
+            // direction: 'vertical',
+            loop: true,
+
+            // 如果需要分页器
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        })
     </script>
 
 </body>
