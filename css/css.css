@@ -358,8 +358,9 @@ main .intro {
 .portfolio h2 {
     text-align: center;
     font-size: 34px;
+    margin-bottom: 34px;
 }
-
+/* 
 .portfolio nav {
     display: inline-block;
     vertical-align: top;
@@ -429,9 +430,18 @@ main .intro {
 
 .portfolio .works .small:nth-child(3) {
     padding-top: 22px;
-}
+} */
 
-.swiper-container {
-    width: 800px;
-    height: 600px;
+.portfolio .swiper-container {
+    width: 668px;
+    height: 501px;
+}
+.portfolio .swiper-button-prev,
+.portfolio .swiper-button-next{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: white;
+    outline: none;
+    margin-top: 20px;
 }
