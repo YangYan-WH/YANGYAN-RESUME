@@ -360,78 +360,6 @@ main .intro {
     font-size: 34px;
     margin-bottom: 34px;
 }
-/* 
-.portfolio nav {
-    display: inline-block;
-    vertical-align: top;
-    margin: 30px auto 30px;
-}
-
-.portfolio nav ol li {
-    float: left;
-    padding-bottom: 5px;
-    cursor: pointer;
-}
-
-.portfolio nav ol>li:nth-child(2),
-.portfolio nav ol>li:nth-child(3) {
-    padding-left: 40px;
-    cursor: pointer;
-}
-
-.portfolio .bar {
-    height: 5px;
-    background: #fff;
-    border-radius: 2px;
-}
-
-.portfolio .bar .bar-inner {
-    transition: 0.5s;
-    height: 100%;
-    background: #e6686a;
-    border-radius: 2px;
-}
-
-.portfolio .state-1 .bar-inner {
-    width: 20%;
-}
-
-.portfolio .state-2 .bar-inner {
-    margin-left: 28%;
-    width: 20%;
-}
-
-.portfolio .state-3 .bar-inner {
-    margin-left: 60%;
-    width: 40%;
-}
-
-.portfolio .works {
-    min-width: 940px;
-}
-
-.portfolio .works .big {
-    float: left;
-}
-
-.portfolio .works .small {
-    float: right;
-}
-
-.portfolio .works .big img {
-    width: 606px;
-    height: 597px;
-}
-
-.portfolio .works .small img {
-    width: 293px;
-    height: 285px;
-}
-
-.portfolio .works .small:nth-child(3) {
-    padding-top: 22px;
-} */
-
 .portfolio .swiper-container {
     width: 668px;
     height: 501px;
@@ -444,4 +372,8 @@ main .intro {
     background-color: white;
     outline: none;
     margin-top: 20px;
+}
+form{
+    width: 700px;
+    margin: 50px auto;
 }
