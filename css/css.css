@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* color: #000; */
+    font-family: 'Microsoft YaHei UI';
 }
 
 body {
@@ -21,33 +21,44 @@ li {
     display: block;
     clear: both;
 }
-[data-x].active{
+
+[data-x].active {
     outline: 1px solid red;
 }
-[data-x].offset{
+
+[data-x].offset {
     transform: translateY(100px)
 }
-[data-x]{
+
+[data-x] {
     transform: translateY(0);
-    transition:all 0.5s;
+    transition: all 0.5s;
 }
-[data-x].animate{
+
+[data-x].animate {
     animation: slideUp 0.5s;
 }
-@keyframes slideUp{
-    0%{
+
+@keyframes slideUp {
+    0% {
         transform: translateY(-30px)
     }
-    100%{
+
+    100% {
         transform: translateY(0)
     }
 }
 
 .topNavBar .logo {
+    /* font-size: 24px;
+    font-weight: bold;
+    font-family: 'Arial Black';
+    padding-left: 16px; */
     font-size: 24px;
     font-weight: bold;
     font-family: 'Arial Black';
-    padding-left: 16px;
+    display: block;
+    text-align: center;
 }
 
 .topNavBar .logo .RS {
@@ -61,31 +72,34 @@ li {
 
 .topNavBar {
     padding: 25px 0 30px;
-    /* padding-bottom: ; */
     position: fixed;
     width: 100%;
-    transition:0.5s;
+    transition: 0.5s;
     z-index: 1;
     color: #b7b7b7;
 }
-.topNavBar.sticky{
+
+.topNavBar.sticky {
     background: white;
     padding: 15px 0 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: #000;
 }
-.topNavBar nav {
-    float: right;
+
+.topNavBar>nav>ul {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.topNavBar>nav >ul> li {
-    float: left;
+.topNavBar>nav>ul>li {
     margin-top: 5px;
-    margin-right: 35px;
-    padding:5px 0;
+    padding: 10px 10px;
     position: relative;
 }
-.topNavBar nav ul li > a{
+
+.topNavBar nav ul li>a {
     display: block;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -96,9 +110,8 @@ li {
     color: inherit;
 }
 
-.topNavBar nav > ul > li.active > a::after,
-.topNavBar nav > ul > li.highlight > a::after { 
-
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav>ul>li.highlight>a::after {
     content: '';
     display: block;
     position: absolute;
@@ -109,42 +122,47 @@ li {
     height: 3px;
     animation: menuSlide .3s;
 }
-@keyframes menuSlide{
-    0%{
+
+@keyframes menuSlide {
+    0% {
         width: 0;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
 
-.topNavBar .submenu{
-    /* border: 1px solid red; */
+.topNavBar .submenu {
     display: none;
     position: absolute;
     right: 0;
-    /* padding-top: 15px; */
     top: 100%;
     background: white;
     color: #3d4451;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-  }
-  .topNavBar li.active > .submenu{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.topNavBar li.active>.submenu {
     display: block;
     animation: submenuSlide .3s;
-  }
-  @keyframes submenuSlide{
-    0%{
-      margin-right: 100%;
+}
+
+@keyframes submenuSlide {
+    0% {
+        margin-right: 100%;
     }
-    100%{
-      margin-right: 0%;
+
+    100% {
+        margin-right: 0%;
     }
-  }
-  .topNavBar .submenu > li{
+}
+
+.topNavBar .submenu>li {
     white-space: nowrap;
     padding: 5px 10px;
-  }
+}
+
 .banner {
     background-image: url(./img/rs-cover.jpg);
     background-position: center center;
@@ -260,7 +278,6 @@ main .media a:nth-child(3) {
 main .media img {
     height: 30px;
     width: 30px;
-    /* background: #e6686a; */
     position: absolute;
     top: 5px;
     left: 5px;
@@ -344,7 +361,8 @@ main .intro {
     transform: translateX(0);
     transition: all 1s;
 }
-.skills.offset ol li .progressBar .progress{
+
+.skills.offset ol li .progressBar .progress {
     transform: translateX(-100%);
 }
 
@@ -360,12 +378,14 @@ main .intro {
     font-size: 34px;
     margin-bottom: 34px;
 }
+
 .portfolio .swiper-container {
     width: 668px;
     height: 501px;
 }
+
 .portfolio .swiper-button-prev,
-.portfolio .swiper-button-next{
+.portfolio .swiper-button-next {
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -373,20 +393,21 @@ main .intro {
     outline: none;
     margin-top: 20px;
 }
-form{
+
+form {
     width: 700px;
     margin: 50px auto;
 }
 
-section.message > ol{
+section.message>ol {
     border-top: 1px solid #ddd;
-    
+
     margin: 0 auto;
     max-width: 700px;
     background: #f4f4f4;
 }
 
-section.message > ol>li{
+section.message>ol>li {
     padding: 16px;
     border-bottom: 1px solid #ddd;
 }
