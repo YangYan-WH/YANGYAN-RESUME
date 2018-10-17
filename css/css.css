@@ -26,15 +26,16 @@ li {
     outline: 1px solid red;
 }
 
-[data-x].offset {
+/* [data-x].offset {
     transform: translateY(100px)
-}
+} */
 
 [data-x] {
     transform: translateY(0);
     transition: all 0.5s;
 }
 
+/* 
 [data-x].animate {
     animation: slideUp 0.5s;
 }
@@ -47,13 +48,9 @@ li {
     100% {
         transform: translateY(0)
     }
-}
+} */
 
 .topNavBar .logo {
-    /* font-size: 24px;
-    font-weight: bold;
-    font-family: 'Arial Black';
-    padding-left: 16px; */
     font-size: 24px;
     font-weight: bold;
     font-family: 'Arial Black';
@@ -181,6 +178,7 @@ main {
 
 main .content {
     max-width: 840px;
+    width: 840px;
     margin: 0 auto;
     background-color: #fff;
     padding: 50px;
@@ -266,7 +264,7 @@ main .media a {
     height: 38px;
     width: 38px;
     border-radius: 50%;
-    border: 1px solid #e6686a;
+    /* border: 1px solid #e6686a; */
     position: relative;
 }
 
@@ -366,14 +364,16 @@ main .intro {
     transform: translateX(-100%);
 }
 
-.portfolio {
+.portfolio,
+.message {
     /* margin: 65px auto 100px; */
     margin: 80px auto 100px;
     max-width: 940px;
     text-align: center;
 }
 
-.portfolio h2 {
+.portfolio h2,
+.message h2 {
     text-align: center;
     font-size: 34px;
     margin-bottom: 34px;
@@ -401,7 +401,6 @@ form {
 
 section.message>ol {
     border-top: 1px solid #ddd;
-
     margin: 0 auto;
     max-width: 700px;
     background: #f4f4f4;
@@ -410,4 +409,11 @@ section.message>ol {
 section.message>ol>li {
     padding: 16px;
     border-bottom: 1px solid #ddd;
+}
+
+@media print {
+    .portfolio {
+        margin: 450px auto 0;
+        padding-top: 100px;
+    }
 }
