@@ -411,6 +411,16 @@ section.message>ol>li {
     border-bottom: 1px solid #ddd;
 }
 
+.message> form > input[type='submit']{
+    display: block;
+    padding: 10px 30px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: #e06567;
+    color: white;
+    margin: 20px auto 0;
+}
 @media print {
     .portfolio {
         margin: 450px auto 0;
