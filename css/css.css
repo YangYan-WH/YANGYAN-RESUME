@@ -364,7 +364,6 @@ section > h2>span:hover::after{
     background-color: #e06567;
     bottom: -5px;
     left: 0;
-    /* margin-left: -50px; */
     transition: 0.3s;
 }
 .portfolio h2,
