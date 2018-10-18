@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>YangYan's Resume</title>
+    <link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui/Input.css">
     <link rel="stylesheet" href="./css/css.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
 </head>
@@ -14,7 +15,7 @@
     <header id="topNavBar" class="topNavBar clearfix ">
         <a class="logo" href="#">
             <span class="RS">YY</span>
-            <span class="RScard">resume</span>
+            <span class="RScard">Resume</span>
         </a>
         <nav class="menu">
             <ul class="clearfix">
@@ -30,25 +31,6 @@
                 <li>
                     <a href="#noteBoard">留言板</a>
                 </li>
-                <!--
-                <li>
-                    <a href="#">博客</a>
-                    <ul class="submenu">
-                        <li>博客1</li>
-                        <li>博客2</li>
-                        <li>博客3</li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">日历</a>
-                </li>
-                <li>
-                    <a href="#">联系方式</a>
-                </li>
-                <li>
-                    <a href="#">其他</a>
-                </li>
-            -->
             </ul>
         </nav>
     </header>
@@ -61,7 +43,7 @@
                 <img src="./css/img/avatar.jpg" alt="头像">
             </div>
             <div class="text">
-                <p class="welcome">Hello
+                <p class="welcome">Hello,I am YangYan.It is my resume.
                     <span class="traingle"></span>
                 </p>
                 <h1>杨言</h1>
@@ -131,7 +113,7 @@
                     <div class="progress" style="width: 40%"></div>
                 </div>
             </li>
-            
+
             <li>
                 <h3>
                     Node.js
@@ -162,10 +144,12 @@
         <ol id="messageList">
         </ol>
         <form action="" id='postMessageForm'>
-            <label for="name">姓名</label>
-            <input type="text" name="name">
-            <label for="content">内容</label>
-            <input type="text" name="content">
+            <label for="name">姓名
+                <input class='ui-input' type="text" name="name">
+            </label>
+            <label for="content">内容
+                <input class='ui-input' type="text" name="content">
+            </label>
             <input type="submit" value="提交">
         </form>
     </section>

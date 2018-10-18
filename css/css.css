@@ -26,29 +26,10 @@ li {
     outline: 1px solid red;
 }
 
-/* [data-x].offset {
-    transform: translateY(100px)
-} */
-
 [data-x] {
     transform: translateY(0);
     transition: all 0.5s;
 }
-
-/* 
-[data-x].animate {
-    animation: slideUp 0.5s;
-}
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(-30px)
-    }
-
-    100% {
-        transform: translateY(0)
-    }
-} */
 
 .topNavBar .logo {
     font-size: 24px;
@@ -193,8 +174,8 @@ main .content .pic {
 main .content .text {
     display: inline-block;
     vertical-align: top;
-    margin-left: 60px;
-    width: 470px;
+    margin-left: 120px;
+    width: 400px;
 }
 
 main .content .text .welcome {
@@ -206,7 +187,7 @@ main .content .text .welcome {
     color: #fff;
     position: relative;
     margin-bottom: 10px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 main .content .text .welcome .traingle {
@@ -222,7 +203,8 @@ main .content .text .welcome .traingle {
 }
 
 main .content .text h1 {
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 main .content .text hr {
@@ -237,16 +219,16 @@ main .content .text dl {
 
 main .content .text dt {
     float: left;
-    width: 30%;
+    width: 20%;
     font-weight: bold;
     margin-top: 12px;
 }
 
 main .content .text dd {
     float: right;
-    width: 70%;
+    width: 75%;
     margin-top: 12px;
-    color: #9da0a7;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 main .media {
@@ -264,7 +246,6 @@ main .media a {
     height: 38px;
     width: 38px;
     border-radius: 50%;
-    /* border: 1px solid #e6686a; */
     position: relative;
 }
 
@@ -343,6 +324,7 @@ main .intro {
 .skills ol li h3 {
     font-weight: normal;
     font-size: 16px;
+    text-align: center;
 }
 
 .skills ol li .progressBar {
@@ -366,12 +348,25 @@ main .intro {
 
 .portfolio,
 .message {
-    /* margin: 65px auto 100px; */
     margin: 80px auto 100px;
     max-width: 940px;
     text-align: center;
 }
-
+section > h2{
+    position: relative;
+}
+section > h2:hover::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #e06567;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -50px;
+    transition: 0.3s;
+}
 .portfolio h2,
 .message h2 {
     text-align: center;
@@ -396,7 +391,7 @@ main .intro {
 
 form {
     width: 700px;
-    margin: 50px auto;
+    margin: 30px auto 80px;
 }
 
 section.message>ol {
@@ -404,13 +399,24 @@ section.message>ol {
     margin: 0 auto;
     max-width: 700px;
     background: #f4f4f4;
+    box-shadow: 0 1px 1px 1px rgba(224, 101, 103,0.3);
 }
 
 section.message>ol>li {
     padding: 16px;
     border-bottom: 1px solid #ddd;
 }
+section.message>ol>li:hover{
+    background-color: rgba(224, 101, 103,0.3)
+}
+.message> form > label{
+    display: block;
+    margin-bottom: 10px;
+}
+.message> form > label > .ui-input:focus{
+    border-color: #e06567;
 
+}
 .message> form > input[type='submit']{
     display: block;
     padding: 10px 30px;
@@ -420,6 +426,7 @@ section.message>ol>li {
     background: #e06567;
     color: white;
     margin: 20px auto 0;
+    cursor: pointer;
 }
 @media print {
     .portfolio {
