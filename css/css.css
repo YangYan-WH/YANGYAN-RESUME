@@ -352,6 +352,10 @@ main .intro {
     max-width: 940px;
     text-align: center;
 }
+.message{
+    margin-bottom: 200px;
+
+}
 section > h2 >span{
     position: relative;
 }
@@ -414,7 +418,6 @@ section.message>ol>li:hover{
 }
 .message> form > label > .ui-input:focus{
     border-color: #e06567;
-
 }
 .message> form > input[type='submit']{
     display: block;
